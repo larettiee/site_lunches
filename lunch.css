@@ -1,0 +1,154 @@
+.dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+    gap:10px;
+    padding: 0 50px;
+    margin: 0 auto;
+}
+
+.category {
+    margin-bottom: 50px;
+}
+
+.dish {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 40px;
+  border-radius: 35px;
+  background-color: white;
+  cursor: pointer;
+  filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+  transition: border 0.1s;
+}
+
+.dish:hover {
+  border: 2px solid tomato;
+}
+
+.dish-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.dish-name {
+  margin:0;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.dish-weight {
+  font-size: 20px;
+  color: grey;
+}
+
+.dish-price {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.add-btn {
+  padding: 10px 30px;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  background-color: #f1eee9;
+  color: black;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: darkgray;
+}
+
+.card {
+  display: block;     
+  max-width: 100%;      
+  height: auto;         
+  border-radius: 35px;
+}
+
+@media (max-width: 800px) {
+  .dishes-grid {
+    padding: 0 30px;
+    gap: 15px;
+  }
+
+  .dish {
+    padding: 20px 25px;
+    border-radius: 25px;
+  }
+
+  .dish-name {
+    font-size: 24px;
+  }
+
+  .dish-weight,
+  .dish-price {
+    font-size: 18px;
+  }
+
+  .add-btn {
+    padding: 8px 25px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .dishes-grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    gap: 10px;
+  }
+
+  .dish {
+    padding: 15px 20px;
+    border-radius: 20px;
+  }
+
+  .dish-name {
+    font-size: 20px;
+  }
+
+  .dish-weight,
+  .dish-price {
+    font-size: 16px;
+  }
+
+  .add-btn {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .dishes-grid {
+    padding: 0 10px;
+    gap: 8px;
+  }
+
+  .dish {
+    padding: 10px 15px;
+    border-radius: 15px;
+  }
+
+  .dish-name {
+    font-size: 18px;
+  }
+
+  .dish-weight,
+  .dish-price {
+    font-size: 14px;
+  }
+
+  .add-btn {
+    padding: 6px 15px;
+    font-size: 13px;
+  }
+}
